@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+.env
+# No subimos el JSON para que el servidor de Render use el suyo propio
+datos_reciclaje.json
