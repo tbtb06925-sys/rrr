@@ -2,7 +2,14 @@ const express = require('express');
 const cors = require('cors');
 const { MongoClient } = require('mongodb');
 
+
 const app = express();
+
+const mongoose = require("mongoose");
+
+mongoose.connect(process.env.MONGO_URI)
+.then(() => console.log("✅ MongoDB conectado"))
+.catch(err => console.error(err));
 
 app.use(cors());
 app.use(express.json({ limit: '50mb' }));
